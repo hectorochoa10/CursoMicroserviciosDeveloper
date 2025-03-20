@@ -1,0 +1,7 @@
+package com.proa.app.exceptions;
+
+public class ClientNotFoundException extends Exception{
+	
+	
+
+}

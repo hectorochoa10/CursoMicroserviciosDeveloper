@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;MicroserviceClient&apos;" deleteContents="false" description="Delete resource &apos;MicroserviceClient&apos;" element1="/MicroserviceClient" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1741996899404"/>&#x0A;<refactoring comment="Delete resource &apos;MicroserviceOrder&apos;" deleteContents="false" description="Delete resource &apos;MicroserviceOrder&apos;" element1="/MicroserviceOrder" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1741996907750"/>
+</session>

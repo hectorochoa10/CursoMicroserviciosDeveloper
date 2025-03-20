@@ -1,0 +1,61 @@
+package com.proa.app.services;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.proa.app.dao.IOrderDAO;
+import com.proa.app.entities.Order;
+import com.proa.app.feign.IFeignClientM;
+
+import feign.FeignException.NotFound;
+
+@Service
+public class ServiceImpl implements IService {
+	
+	@Autowired
+	private IOrderDAO dao;
+	
+	@Autowired
+	private IFeignClientM feign;
+	
+	
+	@Override
+	public boolean insert(long idClient, double total) {
+		try {
+			var response=feign.selectById(idClient);
+			var order=new Order();
+			order.setNameClient(response.getName());
+			order.setAddressClient(response.getAddress());
+			order.setEmailClient(response.getEmail());
+			order.setDate(LocalDate.now());
+			order.setTotal(total);
+			
+			var result=dao.save(order);
+			
+			return result!=null;
+		}
+		catch(NotFound ex){
+			
+		}
+		
+		
+		return false;
+	}
+
+	@Override
+	public List<Order> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean delete(long id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+
+}

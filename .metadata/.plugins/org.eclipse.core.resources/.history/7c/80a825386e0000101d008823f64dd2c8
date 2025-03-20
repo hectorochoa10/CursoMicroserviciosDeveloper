@@ -1,0 +1,8 @@
+package com.proa.app.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface IOrderDAO extends CrudRepository<Order, Long> {
+	
+
+}

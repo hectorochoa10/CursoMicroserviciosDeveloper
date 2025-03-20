@@ -1,0 +1,15 @@
+package com.proa.app.services;
+
+import java.util.List;
+
+import com.proa.app.entities.Client;
+
+public interface IService {
+	
+	boolean insert(Client c);
+	List<Client> selectAll();
+	boolean update(Client c);
+	Client findById(long id);
+	boolean delete(long id);
+
+}

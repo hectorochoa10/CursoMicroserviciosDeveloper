@@ -1,0 +1,5 @@
+package com.proa.app.services;
+
+public interface IService {
+
+}

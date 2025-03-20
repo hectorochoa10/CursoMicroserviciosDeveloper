@@ -1,0 +1,5 @@
+package com.proa.app.feign;
+
+public interface IFeignClientM {
+
+}
